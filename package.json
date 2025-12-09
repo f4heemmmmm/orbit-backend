@@ -1,0 +1,28 @@
+{
+  "name": "orbit-backend",
+  "version": "1.0.0",
+  "description": "Supabase backend for Orbit productivity app",
+  "main": "index.js",
+  "scripts": {
+    "db:types": "supabase gen types typescript --local > supabase/types/database.types.ts",
+    "db:reset": "supabase db reset",
+    "db:push": "supabase db push",
+    "db:pull": "supabase db pull"
+  },
+  "keywords": [
+    "supabase",
+    "backend",
+    "orbit",
+    "productivity"
+  ],
+  "author": "f4heemmmmm",
+  "license": "MIT",
+  "devDependencies": {
+    "supabase": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f4heemmmmm/orbit-backend.git"
+  }
+}
+
