@@ -130,11 +130,11 @@ RETURNS TABLE(
   description TEXT,
   type TEXT,
   date DATE,
-  time TIME
+  "time" TIME
 ) AS $$
 BEGIN
   RETURN QUERY
-  SELECT 
+  SELECT
     e.id,
     e.title,
     e.description,
@@ -142,7 +142,7 @@ BEGIN
     e.date,
     e.time
   FROM schedule_events e
-  WHERE e.user_id = user_uuid 
+  WHERE e.user_id = user_uuid
     AND e.date >= CURRENT_DATE
     AND e.date <= CURRENT_DATE + days_ahead
   ORDER BY e.date ASC, e.time ASC;
